@@ -1,0 +1,39 @@
+﻿  OOP-Bank-Project.cpp
+C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsString.h(32,19): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'OOP-Bank-Project.cpp')
+  
+C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsString.h(36,23): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'OOP-Bank-Project.cpp')
+  
+C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsString.h(43,24): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'OOP-Bank-Project.cpp')
+  
+C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsString.h(134,20): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'OOP-Bank-Project.cpp')
+  
+C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsString.h(221,24): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'OOP-Bank-Project.cpp')
+  
+C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsString.h(250,16): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'OOP-Bank-Project.cpp')
+  
+C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsUser.h(198,12): warning C4240: nonstandard extension used: access to 'clsUser::stLoginRegisterRecord' now defined to be 'public', previously it was defined to be 'private'
+  (compiling source file 'OOP-Bank-Project.cpp')
+      C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsUser.h(26,12):
+      see declaration of 'clsUser::stLoginRegisterRecord'
+  
+C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsBankClient.h(163,9): warning C4240: nonstandard extension used: access to 'clsBankClient::stTransferLogRecord' now defined to be 'public', previously it was defined to be 'private'
+  (compiling source file 'OOP-Bank-Project.cpp')
+      C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsBankClient.h(143,9):
+      see declaration of 'clsBankClient::stTransferLogRecord'
+  
+C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsBankClient.h(317,22): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'OOP-Bank-Project.cpp')
+  
+C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsBankClient.h(327,23): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'OOP-Bank-Project.cpp')
+  
+C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\OOP-Bank-Project\clsTotalBalancesScreen.h(46,76): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'OOP-Bank-Project.cpp')
+  
+  OOP-Bank-Project.vcxproj -> C:\Users\aalku\OneDrive\Desktop\OOP-Bank-Project\x64\Debug\OOP-Bank-Project.exe
