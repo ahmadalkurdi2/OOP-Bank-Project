@@ -18,8 +18,8 @@ To run this project, you need to install **Visual Studio Community** with C++ de
 ---
 
 ## How to Run
-1. Clone this repository:
-   bash
-   git clone https://github.com/ahmadalkurdi2/OOP-Bank-Project.git
+1. Clone or download the entire code
+2. For Login after Run:
+3.  Username: User2, Password: 1234
 
-   or download the entire code
+   
