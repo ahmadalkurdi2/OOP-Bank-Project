@@ -20,7 +20,7 @@ To run this project, you need to install **Visual Studio Community** with C++ de
 ## How to Run
 1. Clone or download the entire code
 2. For Login after Run:
-  Username: User2
+  Username: User2,
   Password: 1234
 
    
