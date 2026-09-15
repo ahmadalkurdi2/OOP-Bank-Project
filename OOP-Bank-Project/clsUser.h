@@ -6,7 +6,7 @@
 #include <vector>
 #include <fstream>
 #include "clsDate.h"
-#include "clsUtil.h"
+#include"clsUtil.h"
 
 
 using namespace std;
@@ -30,7 +30,7 @@ private:
 		vector <string> LoginRegisterDataLine = clsString::Split(Line, Seperator);
 		LoginRegisterRecord.DateTime = LoginRegisterDataLine[0];
 		LoginRegisterRecord.UserName = LoginRegisterDataLine[1];
-		LoginRegisterRecord.Password = clsUtil::DecryptText(LoginRegisterDataLine[2]);
+		LoginRegisterRecord.Password = clsUtil<string>::DecryptText(LoginRegisterDataLine[2]);
 		LoginRegisterRecord.Permissions = stoi(LoginRegisterDataLine[3]);
 
 		return LoginRegisterRecord;
@@ -43,7 +43,7 @@ private:
 		LoginRecord += clsDate::GetSystemDateTimeString() + Seperator;
 		LoginRecord += UserName + Seperator;
 		//here we encrypt store the encrypted Password not the real one.
-		LoginRecord += clsUtil::EncryptText(Password) + Seperator;
+		LoginRecord += clsUtil<string>::EncryptText(Password) + Seperator;
 		LoginRecord += to_string(Permissions);
 		return LoginRecord;
 	}
@@ -54,7 +54,7 @@ private:
 		vUserData = clsString::Split(Line, Seperator);
 
 		return clsUser(enMode::UpdateMode, vUserData[0], vUserData[1], vUserData[2],
-			vUserData[3], vUserData[4], clsUtil::DecryptText(vUserData[5]), stoi(vUserData[6]));
+			vUserData[3], vUserData[4], clsUtil<string>::DecryptText(vUserData[5]), stoi(vUserData[6]));
 
 	}
 
@@ -68,7 +68,7 @@ private:
 		UserRecord += User.Phone + Seperator;
 		UserRecord += User.UserName + Seperator;
 		//here we encypt store the encrypted Password not the real one.
-		UserRecord += clsUtil::EncryptText(User.Password) + Seperator;
+		UserRecord += clsUtil<string>::EncryptText(User.Password) + Seperator;
 		UserRecord += to_string(User.Permissions);
 
 		return UserRecord;
@@ -181,7 +181,7 @@ private:
 
 	static string EnctyptedPassword(string Password)
 	{
-		return clsUtil::EncryptText(Password);
+		return clsUtil<string>::EncryptText(Password);
 	}
 
 

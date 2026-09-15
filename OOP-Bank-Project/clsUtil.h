@@ -93,7 +93,7 @@ public:
 		clsDate::SwapDates(A, B);
 	}
 
-	static void ShuffleArray(T arr[100], T arrLength)
+	static void ShuffleArray(T arr[100], int arrLength)
 	{
 		Swap(arr[RandomNumber(1, arrLength) - 1], arr[RandomNumber(1, arrLength) - 1]);
 	}
@@ -156,4 +156,3 @@ public:
 		return Text;
 	}
 };
-

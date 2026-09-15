@@ -43,7 +43,7 @@ public:
 		cout << "__________________________\n" << endl;
 
 		cout << setw(8) << left << "" << "\t\t\t\t\t\t\t     Total Balances = " << TotalBalances << endl;
-		cout << setw(8) << left << "" << "\t\t\t\t  ( " << clsUtil::NumberToText(TotalBalances) << ")";
+		cout << setw(8) << left << "" << "\t\t\t\t  ( " << clsUtil<string>::NumberToText(TotalBalances) << ")";
 	}
 };
 
