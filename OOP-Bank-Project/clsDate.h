@@ -85,7 +85,7 @@ public:
 			if (RemainingDays > MonthDays)
 			{
 				RemainingDays -= MonthDays;
-				MonthDays++;
+				Date.Month++;
 			}
 			else
 			{
@@ -617,7 +617,7 @@ public:
 
 	static clsDate DecreaseDateByOneWeek(clsDate& Date)
 	{
-		for (short i{ 0 }; i < 6; i++)
+		for (short i{ 0 }; i < 7; i++)
 			Date = DecreaseDateByOneDay(Date);
 		return Date;
 	}
@@ -820,17 +820,14 @@ public:
 		return CalculateBusinessDays(DateFrom, DateTo);
 	}
 
-	static clsDate CalculateVacationReturnDate(clsDate& DateFrom, short VacationDays)
+	static clsDate CalculateVacationReturnDate(clsDate DateFrom, short VacationDays)
 	{
-		short WeekEndCounter{ 0 };
-		for (short i{ 0 }; i < VacationDays; i++)
+		while (VacationDays > 0)
 		{
-			if (IsWeekEnd(DateFrom))
-				WeekEndCounter++;
 			DateFrom = AddOneDay(DateFrom);
+			if (!IsWeekEnd(DateFrom))
+				VacationDays--;
 		}
-		for (short i{ 0 }; i < WeekEndCounter; i++)
-			DateFrom = AddOneDay(DateFrom);
 		return DateFrom;
 	}
 

@@ -6,6 +6,7 @@
 
 using namespace std;
 
+template<class T>
 class clsUtil
 {
 public:
@@ -13,7 +14,7 @@ public:
 
 	static void Srand()
 	{
-		srand(unsigned(time(NULL)));
+		srand(static_cast<unsigned>(time(nullptr)));
 	}
 
 	static int RandomNumber(int From, int To)
@@ -27,13 +28,13 @@ public:
 			CharType = enCharType(RandomNumber(1, 3));
 		switch (CharType)
 		{
-		case enCharType::SmallLetter:
+		case SmallLetter:
 			return char(RandomNumber(97, 122));
-		case enCharType::CapitalLetter:
+		case CapitalLetter:
 			return char(RandomNumber(65, 90));
-		case enCharType::SpecialCharacter:
+		case SpecialCharacter:
 			return char(RandomNumber(33, 47));
-		case enCharType::Digit:
+		case Digit:
 			return char(RandomNumber(48, 57));
 		default:
 			return char(RandomNumber(65, 90));
@@ -50,12 +51,8 @@ public:
 
 	static string GenerateKey(enCharType CharType = CapitalLetter)
 	{
-		string Key = GenerateWord(CharType, 4) + "-";
-		Key += GenerateWord(CharType, 4) + "-";
-		Key += GenerateWord(CharType, 4) + "-";
-		Key += GenerateWord(CharType, 4);
-
-		return Key;
+		return  GenerateWord(CharType, 4) + "-" + GenerateWord(CharType, 4) + "-"
+			+ GenerateWord(CharType, 4) + "-" + GenerateWord(CharType, 4);
 	}
 
 	static void GenerateKeys(short NumberOfKeys, enCharType CharType)
@@ -84,37 +81,9 @@ public:
 			arr[i] = GenerateKey(CharType);
 	}
 
-	static void Swap(int& A, int& B)
+	static void Swap(T& A, T& B)
 	{
-		int Temp = A;
-		A = B;
-		B = Temp;
-	}
-
-	static void Swap(double& A, double& B)
-	{
-		double Temp = A;
-		A = B;
-		B = Temp;
-	}
-
-	static void Swap(bool& A, bool& B)
-	{
-		bool Temp = A;
-		A = B;
-		B = Temp;
-	}
-
-	static void Swap(char& A, char& B)
-	{
-		char Temp = A;
-		A = B;
-		B = Temp;
-	}
-
-	static void Swap(string& A, string& B)
-	{
-		string Temp = A;
+		T Temp = A;
 		A = B;
 		B = Temp;
 	}
@@ -124,12 +93,7 @@ public:
 		clsDate::SwapDates(A, B);
 	}
 
-	static void ShuffleArray(int arr[100], int arrLength)
-	{
-		Swap(arr[RandomNumber(1, arrLength) - 1], arr[RandomNumber(1, arrLength) - 1]);
-	}
-
-	static void ShuffleArray(string arr[100], int arrLength)
+	static void ShuffleArray(T arr[100], T arrLength)
 	{
 		Swap(arr[RandomNumber(1, arrLength) - 1], arr[RandomNumber(1, arrLength) - 1]);
 	}

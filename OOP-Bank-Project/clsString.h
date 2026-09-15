@@ -9,29 +9,28 @@ class clsString
 	string _Value;
 
 public:
-	clsString()
-	{
-		_Value = "";
-	}
-	clsString(string Value)
-	{
-		_Value = Value;
-	}
-	void SetValue(string Value)
+	clsString() = default;
+
+	clsString(const string& Value) : _Value(Value) {}
+
+	void SetValue(const string& Value)
 	{
 		_Value = Value;
 	}
-	string GetValue()
+
+	string GetValue() const
 	{
 		return _Value;
 	}
-	_declspec(property(get = GetValue, put = SetValue)) string Value;
 
-	static short Length(string S1)
+	__declspec(property(get = GetValue, put = SetValue)) string Value;
+
+	static short Length(const string& S1)
 	{
 		return S1.length();
 	}
-	short Length()
+
+	short Length() const
 	{
 		return _Value.length();
 	}
@@ -92,7 +91,7 @@ public:
 	static string UpperAllString(string S1)
 	{
 		for (short i{ 0 }; i < S1.length(); i++)
-			S1[i] = toupper(S1[i]);
+			S1.at(i) = toupper(S1.at(i));
 		return S1;
 	}
 	void UpperAllString()
@@ -128,16 +127,16 @@ public:
 	}
 
 	enum enWhatToCount { SmallLetters, CapitalLetters, All };
-	static short CountLetters(string S1, enWhatToCount WhatToCount = enWhatToCount::All)
+	static short CountLetters(string S1, enWhatToCount WhatToCount = All)
 	{
-		if (WhatToCount == enWhatToCount::All)
+		if (WhatToCount == All)
 			return S1.length();
 		short Counter{ 0 };
 		for (short i{ 0 }; i < S1.length(); i++)
 		{
-			if (WhatToCount == enWhatToCount::CapitalLetters && isupper(S1[i]))
+			if (WhatToCount == CapitalLetters && isupper(S1[i]))
 				Counter++;
-			if (WhatToCount == enWhatToCount::SmallLetters && islower(S1[i]))
+			if (WhatToCount == SmallLetters && islower(S1[i]))
 				Counter++;
 		}
 		return Counter;
