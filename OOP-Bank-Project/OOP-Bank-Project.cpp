@@ -2,7 +2,7 @@
 #include"clsCurrency.h"
 #include "clsLoginScreen.h"
 
-// When run the code enter those to show the main screen
+// When run the code enter Username and Password to show the main screen
 // Username: User2
 // Password: 1234
 
