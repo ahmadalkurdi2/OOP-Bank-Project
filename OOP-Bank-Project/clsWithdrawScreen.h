@@ -64,8 +64,8 @@ public:
             {
                 while (!Client.Withdraw(Amount))
                 {
-                    cout << "\nCannot withdraw, Insuffecient Balance!\n";
-                    cout << "\nAmout to withdraw is: " << Amount;
+                    cout << "\nCannot withdraw, Insufficient Balance!\n";
+                    cout << "\nAmount to withdraw is: " << Amount;
                     cout << "\nYour Balance is: " << Client.AccountBalance;
                     cout << "\nPlease enter valid Withdraw amount? ";
                     Amount = clsInputValidate<double>::ReadNumber();

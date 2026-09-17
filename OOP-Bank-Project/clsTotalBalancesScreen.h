@@ -26,7 +26,7 @@ public:
 		cout << setw(25) << left << "" << "\n\t\t_______________________________________________________";
 		cout << "__________________________\n" << endl;
 
-		cout << setw(25) << left << "" << "| " << left << setw(15) << "Accout Number";
+		cout << setw(25) << left << "" << "| " << left << setw(15) << "Account Number";
 		cout << "| " << left << setw(40) << "Client Name";
 		cout << "| " << left << setw(12) << "Balance";
 		cout << setw(25) << left << "" << "\t\t_______________________________________________________";

@@ -55,7 +55,6 @@ class clsMainScreen :protected clsScreen
 
 	static void _ShowUpdateClientScreen()
 	{
-		//cout << "\nUpdate Client Screen Will be here...\n";
 		clsUpdateClientScreen::ShowUpdateClientScreen();
 	}
 
@@ -182,7 +181,7 @@ public:
 		_DrawScreenHeader("\t\tMain Screen");
 
 		cout << setw(37) << left << "" << "===========================================\n";
-		cout << setw(37) << left << "" << "\t\t\tMain Menue\n";
+		cout << setw(37) << left << "" << "\t\t\tMain Menu\n";
 		cout << setw(37) << left << "" << "===========================================\n";
 		cout << setw(37) << left << "" << "\t[1] Show Client List.\n";
 		cout << setw(37) << left << "" << "\t[2] Add New Client.\n";

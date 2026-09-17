@@ -20,9 +20,9 @@ class clsTransferLogScreen :protected clsScreen
 public:
 	static void ShowTransferLogScreen()
 	{
-		vector<clsBankClient::stTransferLogRecord> vTransferLogRecord=clsBankClient::GetTransferLogList();
+		vector<clsBankClient::stTransferLogRecord> vTransferLogRecord = clsBankClient::GetTransferLogList();
 
-		string Title = "\tTansfer Log List Screen";
+		string Title = "\tTransfer Log List Screen";
 		string SubTitle = "\t (" + to_string(vTransferLogRecord.size()) + ") Records Found";
 
 		_DrawScreenHeader(Title, SubTitle);

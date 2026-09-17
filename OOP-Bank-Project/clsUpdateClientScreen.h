@@ -56,7 +56,7 @@ public:
 
         _DrawScreenHeader("\tUpdate Client Screen");
 
-        string AccountNumber = "";
+        string AccountNumber;
 
         cout << "\nPlease Enter client Account Number: ";
         AccountNumber = clsInputValidate<string>::ReadString();

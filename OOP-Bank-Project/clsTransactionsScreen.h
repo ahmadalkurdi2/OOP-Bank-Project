@@ -14,7 +14,7 @@ using namespace std;
 class clsTransactionsScreen :protected clsScreen
 {
 	enum enTransactionsMenuOptions {
-		eDeposite = 1, eWithdraw, eShowTotalBalance,eTransfer,eTransferLog, eShowMainMenu
+		eDeposite = 1, eWithdraw, eShowTotalBalance, eTransfer, eTransferLog, eShowMainMenu
 	};
 
 	static enTransactionsMenuOptions _ReadTransactionsMenuOption()
@@ -43,7 +43,7 @@ class clsTransactionsScreen :protected clsScreen
 	{
 		clsTransferScreen::ShowTransferScreen();
 	}
-	
+
 	static void _ShowTransferLogScreen()
 	{
 		clsTransferLogScreen::ShowTransferLogScreen();
@@ -51,7 +51,7 @@ class clsTransactionsScreen :protected clsScreen
 
 	static void _GoBackToTransactionsMenu()
 	{
-		cout << "\n\nPress any key to go back to Transactions Menue...";
+		cout << "\n\nPress any key to go back to Transactions Menu...";
 		system("pause>0");
 		ShowTransactionsMenu();
 	}
@@ -113,14 +113,14 @@ public:
 		_DrawScreenHeader("\t  Transactions Screen");
 
 		cout << setw(37) << left << "" << "===========================================\n";
-		cout << setw(37) << left << "" << "\t\t  Transactions Menue\n";
+		cout << setw(37) << left << "" << "\t\t  Transactions Menu\n";
 		cout << setw(37) << left << "" << "===========================================\n";
 		cout << setw(37) << left << "" << "\t[1] Deposit.\n";
 		cout << setw(37) << left << "" << "\t[2] Withdraw.\n";
 		cout << setw(37) << left << "" << "\t[3] Total Balances.\n";
 		cout << setw(37) << left << "" << "\t[4] Transfer.\n";
 		cout << setw(37) << left << "" << "\t[5] Transfer Log.\n";
-		cout << setw(37) << left << "" << "\t[6] Main Menue.\n";
+		cout << setw(37) << left << "" << "\t[6] Main Menu.\n";
 		cout << setw(37) << left << "" << "===========================================\n";
 
 		_PerformTransactionsMenuOption(_ReadTransactionsMenuOption());

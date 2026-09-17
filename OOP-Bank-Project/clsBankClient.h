@@ -178,7 +178,7 @@ public:
 
 	bool IsEmpty()
 	{
-		return _Mode == enMode::EmptyMode;
+		return _Mode == EmptyMode;
 	}
 
 	string AccountNumber()
